@@ -90,6 +90,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-right: 3rem;
+  padding-left: 15%;
 }
 
 .profile-image img {
@@ -173,5 +174,19 @@ export default {
 .profile-stat-count,
 .profile-edit-btn {
   font-weight: 650;
+}
+@media only screen and (max-width: 600px) {
+  .profile-image img {
+    width: 77px;
+    height: 77px;
+  }
+  div.profile-stats,
+  p {
+    inset-inline: initial;
+    padding: 0px 16px 21px;
+  }
+  .profile-image {
+    padding-left: 15%;
+  }
 }
 </style>

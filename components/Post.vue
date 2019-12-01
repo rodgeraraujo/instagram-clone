@@ -3,7 +3,7 @@
     <header>
       <div class="Post-user">
         <div class="Post-user-avatar">
-          <nuxt-link :to="'/profile/' + postInfo.user">
+          <nuxt-link :to="'/' + postInfo.user">
             <img
               :alt="postInfo.user"
               :src="fetchUser(postInfo.user).profilePic"
@@ -11,7 +11,7 @@
           </nuxt-link>
         </div>
         <div class="Post-user-nickname">
-          <nuxt-link :to="'/profile/' + postInfo.user" class="anchor-nodec">
+          <nuxt-link :to="'/' + postInfo.user" class="anchor-nodec">
             <span>{{ postInfo.user }}</span>
           </nuxt-link>
         </div>
@@ -24,7 +24,7 @@
     </div>
     <Like />
     <div class="Post-caption">
-      <nuxt-link :to="'/profile/' + postInfo.user">
+      <nuxt-link :to="'/' + postInfo.user">
         <strong>{{ postInfo.user }}</strong>
       </nuxt-link>
       <br />
