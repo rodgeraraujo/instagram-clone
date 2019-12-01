@@ -8,7 +8,7 @@
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #fafafa;
   color: #262626;
   padding-bottom: 3rem;
