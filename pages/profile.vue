@@ -2,21 +2,19 @@
   <div class="container">
     <div>
       <Header />
-      <section class="App-main">
-        <post />
-      </section>
+      <Profile />
     </div>
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
-import Post from '~/components/Post.vue'
+import Profile from '~/components/ProfileHeader.vue'
 
 export default {
   components: {
     Header,
-    Post
+    Profile
   }
 }
 </script>
