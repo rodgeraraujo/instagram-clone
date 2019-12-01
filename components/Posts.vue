@@ -3,7 +3,7 @@
     <div class="container">
       <div class="gallery">
         <div
-          v-for="(post, index) of posts"
+          v-for="(post, index) of userPosts"
           :key="index"
           class="gallery-item"
           tabindex="0"
@@ -44,13 +44,22 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+// import { mapGetters } from 'vuex'
 
 export default {
-  computed: mapGetters({
-    posts: 'posts/get'
-  }),
-  methods: {}
+  // computed: mapGetters({
+  //   posts: 'posts/get'
+  // }),
+  // methods: {}
+  props: {
+    userPosts: {
+      type: Array,
+      required: false,
+      default() {
+        return []
+      }
+    }
+  }
 }
 </script>
 

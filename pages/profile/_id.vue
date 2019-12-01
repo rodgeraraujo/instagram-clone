@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Header />
-      <Profile :profile="user" :posts="relatedPosts" />
+      <Profile :user="user" :posts="relatedPosts" />
     </div>
   </div>
 </template>
@@ -18,6 +18,7 @@ export default {
   },
   data() {
     return {
+      postagem: [],
       id: this.$route.params.id
     }
   },

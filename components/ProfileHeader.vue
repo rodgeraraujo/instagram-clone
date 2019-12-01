@@ -4,10 +4,9 @@
       <div class="container">
         <div class="profile">
           <div class="profile-image">
-            <img :src="user.profilePic" alt />
+            <img :src="user.profilePic" alt="" />
           </div>
 
-          <!-- src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" -->
           <div class="profile-user-settings">
             <h1 class="profile-user-name">{{ user.username }}</h1>
             <button class="btn profile-edit-btn">Edit Profile</button>
@@ -17,11 +16,11 @@
           </div>
           <div class="profile-stats">
             <li>
-              <span class="profile-stat-count">{{ relatedPosts.length }}</span>
+              <span class="profile-stat-count">{{ posts.length }}</span>
               posts
             </li>
             <li>
-              <span class="profile-stat-count">{{ user.follwers }}</span>
+              <span class="profile-stat-count">{{ user.followers }}</span>
               followers
             </li>
             <li>
@@ -42,7 +41,7 @@
       </div>
     </header>
 
-    <Posts :relatedPosts="relatedPosts" />
+    <Posts :userPosts="posts" />
   </div>
 </template>
 
@@ -56,14 +55,14 @@ export default {
   props: {
     user: {
       type: Array,
-      required: true,
+      required: false,
       default() {
         return []
       }
     },
-    relatedPosts: {
-      type: Object,
-      required: true,
+    posts: {
+      type: Array,
+      required: false,
       default() {
         return {}
       }
@@ -94,6 +93,8 @@ export default {
 }
 
 .profile-image img {
+  width: 152px;
+  height: 152px;
   border-radius: 50%;
 }
 
@@ -118,6 +119,7 @@ export default {
   text-indent: -1000%;
   margin-top: -1.7rem;
   position: absolute;
+  cursor: pointer;
 }
 
 .profile-user-name {
@@ -134,6 +136,7 @@ export default {
   border-radius: 0.3rem;
   padding: 0 2.4rem;
   margin-left: 2rem;
+  cursor: pointer;
 }
 
 .profile-settings-btn {
