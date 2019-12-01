@@ -65,6 +65,7 @@ export default {
   padding: 0 2rem;
 }
 .Post {
+  width: 550px;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
   background-color: #fff;
@@ -125,5 +126,10 @@ export default {
   text-decoration: none;
   border: none;
   padding: none;
+}
+@media only screen and (max-width: 600px) {
+  .Post {
+    margin-left: 20%;
+  }
 }
 </style>

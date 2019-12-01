@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "username": "username",
-    "description": "Lorem impsum dolor set amet...!",
+    "username": "baby_yoda",
+    "description": "Too Cute I'm!",
     "followers": "822",
     "following": "22",
-    "name": "User",
-    "lastname": "Name",
+    "name": "Baby",
+    "lastname": "Yoda",
     "profilePic": "/images/users/profile_01.jpg"
   },
   {
@@ -25,8 +25,8 @@
     "description": "Hunting monsters!",
     "followers": "1722",
     "following": "1",
-    "name": "Geral",
-    "lastname": "de Rivia",
-    "profilePic": "/images/users/profile_02.jpg"
+    "name": "Geralt",
+    "lastname": "the Rivia",
+    "profilePic": "/images/users/profile_03.jpg"
   }
 ]

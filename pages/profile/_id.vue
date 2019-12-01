@@ -32,7 +32,7 @@ export default {
       return this.$store.state.users.find((user) => user.username === this.id)
     },
     relatedPosts() {
-      return this.$store.state.posts.filter((post) => post.username !== this.id)
+      return this.$store.state.posts.filter((post) => post.user === this.id)
     }
   }
 }
@@ -43,8 +43,8 @@ export default {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-} */
-/* .App {
+}
+.App {
   background: #fafafaa8;
   min-height: 100vh;
   min-width: 100vh;
