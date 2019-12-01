@@ -5,7 +5,22 @@
         <nuxt-link class="Nav-brand-logo" to="/">Instagram</nuxt-link>
       </div>
       <nuxt-link class="Nav-user-explore" to="/" />
-      <nuxt-link to="" class="Nav-user-notifications" />
+      <div id="hover" href="#">
+        <nuxt-link to class="Nav-user-notifications"></nuxt-link>
+        <div id="popup">
+          <img
+            height="100px"
+            class="popover-img"
+            src="https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.webp"
+            alt
+          />
+        </div>
+      </div>
+      <!-- <nuxt-link
+        @click.native="notifyMenu"
+        to=""
+        class="Nav-user-notifications"
+      />-->
       <nuxt-link class="Nav-user-button" to="/rodger" />
     </div>
   </nav>
@@ -68,6 +83,7 @@ export default {
   width: 22px;
   text-indent: -1000%;
   margin-left: 3rem;
+  margin-top: -0.3rem;
 }
 .Nav-user-button {
   display: block;
@@ -79,5 +95,44 @@ export default {
   width: 22px;
   text-indent: -1000%;
   margin-left: 3rem;
+}
+
+// popover notify
+#hover {
+  padding: 6px;
+  display: block;
+  position: relative;
+}
+
+#popup {
+  opacity: 0;
+  top: 32px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  padding: 0px;
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.0975);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.0975);
+  display: block;
+  max-height: 0px;
+  min-height: 0px;
+  position: absolute;
+}
+#hover:hover #popup {
+  height: auto;
+  opacity: 1;
+  max-height: 200px;
+  min-height: 10px;
+  margin-top: -3px;
+}
+img {
+  margin-left: 55px;
+  margin-right: 55px;
+}
+.content .popover {
+  top: 11px;
 }
 </style>

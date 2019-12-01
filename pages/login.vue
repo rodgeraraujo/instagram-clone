@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="login">Login</button>
+    <Popover />
   </div>
 </template>
 
