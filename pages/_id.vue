@@ -27,6 +27,7 @@ export default {
       title: 'Instagram'
     }
   },
+  middleware: 'authenticated',
   computed: {
     user() {
       return this.$store.state.users.find((user) => user.username === this.id)

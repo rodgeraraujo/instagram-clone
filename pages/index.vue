@@ -23,6 +23,7 @@ export default {
       return this.$store.state.posts
     }
   },
+  middleware: 'authenticated',
   methods: {}
 }
 </script>

@@ -5,8 +5,8 @@
         <nuxt-link class="Nav-brand-logo" to="/">Instagram</nuxt-link>
       </div>
       <nuxt-link class="Nav-user-explore" to="/" />
-      <nuxt-link class="Nav-user-notifications" to="/" />
-      <nuxt-link class="Nav-user-button" to="/profile/rodger" />
+      <nuxt-link to="" class="Nav-user-notifications" />
+      <nuxt-link class="Nav-user-button" to="/rodger" />
     </div>
   </nav>
 </template>

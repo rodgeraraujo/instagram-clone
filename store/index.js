@@ -3,20 +3,27 @@ import users from '~/data/users.json'
 
 export const state = () => ({
   posts,
-  users
+  users,
+  authenticated: false
 })
 
 export const mutations = {
-  add(state, post) {
+  addPost(state, post) {
     state.posts.push(post)
   },
   addUser(state, user) {
     state.user.push(user)
+  },
+  login(state) {
+    state.authenticated = true
+  },
+  logout(state) {
+    state.authenticated = false
   }
 }
 
 export const getters = {
-  get(state) {
+  getPost(state) {
     return state.posts
   },
   getUser(state) {
