@@ -54,17 +54,17 @@ export default {
   },
   props: {
     user: {
-      type: Array,
-      required: false,
+      type: Object,
+      required: true,
       default() {
-        return []
+        return {}
       }
     },
     posts: {
       type: Array,
-      required: false,
+      required: true,
       default() {
-        return {}
+        return []
       }
     },
     data: () => ({})

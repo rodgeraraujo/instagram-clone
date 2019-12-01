@@ -6,7 +6,7 @@
       </div>
       <nuxt-link class="Nav-user-explore" to="/" />
       <nuxt-link class="Nav-user-notifications" to="/" />
-      <nuxt-link class="Nav-user-button" to="/profile" />
+      <nuxt-link class="Nav-user-button" to="/profile/rodger" />
     </div>
   </nav>
 </template>

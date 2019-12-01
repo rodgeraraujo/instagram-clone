@@ -3,31 +3,34 @@
     <header>
       <div class="Post-user">
         <div class="Post-user-avatar">
-          <nuxt-link to="/profile">
-            <img alt="username" src="~/assets/profile.png" />
+          <nuxt-link :to="'/profile/' + postInfo.user">
+            <img
+              :alt="postInfo.user"
+              :src="fetchUser(postInfo.user).profilePic"
+            />
           </nuxt-link>
         </div>
         <div class="Post-user-nickname">
-          <nuxt-link class="anchor-nodec" to="/profile">
-            <span>username</span>
+          <nuxt-link :to="'/profile/' + postInfo.user" class="anchor-nodec">
+            <span>{{ postInfo.user }}</span>
           </nuxt-link>
         </div>
       </div>
     </header>
     <div class="Post-image">
       <div class="Post-image-bg">
-        <img alt="caption" src="~/assets/post.jpg" />
+        <img :src="postInfo.url" alt="caption" />
       </div>
     </div>
     <Like />
     <div class="Post-caption">
-      <nuxt-link to="/profile">
-        <strong>username</strong>
+      <nuxt-link :to="'/profile/' + postInfo.user">
+        <strong>{{ postInfo.user }}</strong>
       </nuxt-link>
       <br />
-      Lorem ipsum dolor set amet...
+      {{ postInfo.caption }}
     </div>
-    <div class="Post-time">1 hour</div>
+    <div class="Post-time">{{ postInfo.time }}</div>
   </article>
 </template>
 
@@ -37,6 +40,20 @@ import Like from '~/components/Like.vue'
 export default {
   components: {
     Like
+  },
+  props: {
+    postInfo: {
+      type: Object,
+      required: false,
+      default() {
+        return []
+      }
+    }
+  },
+  methods: {
+    fetchUser(username) {
+      return this.$store.state.users.find((user) => user.username === username)
+    }
   }
 }
 </script>

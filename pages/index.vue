@@ -1,8 +1,10 @@
 <template>
   <div>
     <Header />
-    <section class="App-main">
-      <post />
+    <section vfo class="App-main">
+      <div v-for="post in fetchPosts" :key="post.id">
+        <Post :postInfo="post" />
+      </div>
     </section>
   </div>
 </template>
@@ -15,7 +17,13 @@ export default {
   components: {
     Header,
     Post
-  }
+  },
+  computed: {
+    fetchPosts() {
+      return this.$store.state.posts
+    }
+  },
+  methods: {}
 }
 </script>
 
