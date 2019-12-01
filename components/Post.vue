@@ -42,6 +42,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 .Post {
   border-radius: 3px;
   border: 1px solid #e6e6e6;

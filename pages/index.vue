@@ -1,11 +1,9 @@
 <template>
-  <div class="container">
-    <div>
-      <Header />
-      <section class="App-main">
-        <post />
-      </section>
-    </div>
+  <div>
+    <Header />
+    <section class="App-main">
+      <post />
+    </section>
   </div>
 </template>
 
@@ -22,16 +20,11 @@ export default {
 </script>
 
 <style scoped>
-/* body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-} */
-/* .App {
-  background: #fafafaa8;
-  min-height: 100vh;
-  min-width: 100vh;
-} */
+.container {
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
 .App-main {
   width: 100%;

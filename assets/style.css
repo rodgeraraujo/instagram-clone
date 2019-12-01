@@ -1,0 +1,56 @@
+body {
+  margin: 100px 0px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+}
+
+.top-padding {
+  padding-top: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.anchor-nodec {
+  text-decoration: none;
+  color: black;
+}
+
+.anchor-nodec:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.button-nodec {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.button-nodec:focus {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+/* for upload post */
+.post-upload-button {
+  position: fixed;
+  background: none;
+  display: block;
+  background-position: -64px -34px;
+  background-image: url(/sprite.png);
+  background-size: 280px 250px;
+  background-repeat: no-repeat;
+  height: 53px;
+  width: 56px;
+  padding-left: 10px;
+  margin-left: 12px;
+  text-indent: -1000%;
+  top: 80%;
+  left: 83%;
+}

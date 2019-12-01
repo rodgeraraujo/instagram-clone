@@ -1,0 +1,155 @@
+<template>
+  <div>
+    <header>
+      <div class="container">
+        <div class="profile">
+          <div class="profile-image">
+            <img
+              src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
+              alt
+            />
+          </div>
+          <div class="profile-user-settings">
+            <h1 class="profile-user-name">username</h1>
+            <button class="btn profile-edit-btn">Edit Profile</button>
+            <button class="btn profile-settings-btn">
+              <i class="settings-icon"></i>
+            </button>
+          </div>
+          <div class="profile-stats">
+            <li>
+              <span class="profile-stat-count">20</span>
+              posts
+            </li>
+            <li>
+              <span class="profile-stat-count">823</span>
+              followers
+            </li>
+            <li>
+              <span class="profile-stat-count">36</span>
+              following
+            </li>
+          </div>
+          <div class="profile-bio">
+            <p>
+              <span class="profile-real-name">User Name</span>
+              <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <Posts />
+  </div>
+</template>
+
+<script>
+import Posts from '~/components/Posts.vue'
+export default {
+  components: {
+    Posts
+  }
+}
+</script>
+
+<style scoped>
+.profile {
+  padding: 5rem 0;
+}
+
+.profile::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.profile-image {
+  float: left;
+  width: calc(33.333% - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.profile-image img {
+  border-radius: 50%;
+}
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+  float: left;
+  width: calc(66.666% - 2rem);
+}
+
+.profile-user-settings {
+  margin-top: 1.1rem;
+}
+.settings-icon {
+  display: block;
+  background-position: -126px -356px;
+  background-image: url(/sprite.png);
+  background-size: 405px 379px;
+  background-repeat: no-repeat;
+  height: 23px;
+  width: 22px;
+  text-indent: -1000%;
+  margin-top: -1.7rem;
+  position: absolute;
+}
+
+.profile-user-name {
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.profile-edit-btn {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  border: 0.1rem solid #dbdbdb;
+  background-color: #fafafa;
+  border-radius: 0.3rem;
+  padding: 0 2.4rem;
+  margin-left: 2rem;
+}
+
+.profile-settings-btn {
+  font-size: 2rem;
+  margin-left: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
+.profile-stats {
+  margin-top: 2.3rem;
+}
+
+.profile-stats li {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+
+.profile-stats li:last-of-type {
+  margin-right: 0;
+}
+
+.profile-bio {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2.3rem;
+}
+
+.profile-real-name,
+.profile-stat-count,
+.profile-edit-btn {
+  font-weight: 650;
+}
+</style>

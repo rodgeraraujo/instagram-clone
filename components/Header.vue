@@ -4,6 +4,8 @@
       <div class="Nav-brand">
         <nuxt-link class="Nav-brand-logo" to="/">Instagram</nuxt-link>
       </div>
+      <nuxt-link class="Nav-user-explore" to="/" />
+      <nuxt-link class="Nav-user-notifications" to="/" />
       <nuxt-link class="Nav-user-button" to="/profile" />
     </div>
   </nav>
@@ -45,15 +47,37 @@ export default {
   width: 176px;
   text-indent: -1000%;
 }
-.Nav-user-button {
+.Nav-user-explore {
   display: block;
-  background-position: -307px -172px;
+  background-position: -276px -355px;
   background-image: url(/sprite.png);
   background-size: 405px 379px;
   background-repeat: no-repeat;
-  height: 35px;
-  width: 25px;
+  height: 23px;
+  width: 22px;
   text-indent: -1000%;
   margin-left: auto;
+}
+.Nav-user-notifications {
+  display: block;
+  background-position: -354px -300px;
+  background-image: url(/sprite.png);
+  background-size: 405px 379px;
+  background-repeat: no-repeat;
+  height: 22px;
+  width: 22px;
+  text-indent: -1000%;
+  margin-left: 3rem;
+}
+.Nav-user-button {
+  display: block;
+  background-position: -309px -177px;
+  background-image: url(/sprite.png);
+  background-size: 405px 379px;
+  background-repeat: no-repeat;
+  height: 22px;
+  width: 22px;
+  text-indent: -1000%;
+  margin-left: 3rem;
 }
 </style>
