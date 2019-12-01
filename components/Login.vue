@@ -39,10 +39,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
+  computed: mapState(['authenticated']),
+  middleware: 'authenticated',
   methods: {
     onSubmit() {
-      console.log('login')
+      this.$store.commit('login')
+      this.$router.push({ path: this.redirect || '/' })
     }
   }
 }

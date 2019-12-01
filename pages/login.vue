@@ -1,23 +1,15 @@
 <template>
   <div>
-    <button @click="login">Login</button>
-    <Popover />
+    <Login />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import Login from '~/components/Login.vue'
 
 export default {
-  computed: mapState(['authenticated']),
-  middleware: 'authenticated',
-  methods: {
-    login() {
-      this.$store.commit('login')
-      this.$router.push({ path: this.redirect || '/' })
-    }
+  components: {
+    Login
   }
 }
 </script>
-
-<style lang="scss" scoped></style>
