@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "username",
+    "description": "Lorem impsum dolor set amet...!",
+    "followers": "822",
+    "following": "22",
+    "name": "User",
+    "lastname": "Name",
+    "profilePic": "~/assets/profile_01.jpg"
+  },
+  {
+    "id": 2,
+    "username": "rodger",
+    "description": "This is the way!",
+    "followers": "342",
+    "following": "231",
+    "name": "Rogério",
+    "lastname": "Araújo",
+    "profilePic": "~/assets/profile_02.jpg"
+  },
+  {
+    "id": 3,
+    "username": "_geralt",
+    "description": "Hunting monsters!",
+    "followers": "1722",
+    "following": "1",
+    "name": "Geral",
+    "lastname": "de Rivia",
+    "profilePic": "~/assets/profile_03.jpg"
+  }
+]
