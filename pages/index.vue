@@ -6,17 +6,20 @@
         <Post :postInfo="post" />
       </div>
     </section>
+    <Loader />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
 import Post from '~/components/Post.vue'
+import Loader from '~/components/Loader.vue'
 
 export default {
   components: {
     Header,
-    Post
+    Post,
+    Loader
   },
   computed: {
     fetchPosts() {

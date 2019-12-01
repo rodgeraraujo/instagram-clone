@@ -40,11 +40,17 @@
         </div>
       </div>
     </div>
+    <Loader />
   </div>
 </template>
 
 <script>
+import Loader from '~/components/Loader.vue'
+
 export default {
+  components: {
+    Loader
+  },
   props: {
     userPosts: {
       type: Array,
