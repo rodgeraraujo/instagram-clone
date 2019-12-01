@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Header />
-      <Profile />
+      <Profile :profile="user" :posts="relatedPosts" />
     </div>
   </div>
 </template>
@@ -15,6 +15,24 @@ export default {
   components: {
     Header,
     Profile
+  },
+  data() {
+    return {
+      id: this.$route.params.id
+    }
+  },
+  head() {
+    return {
+      title: 'Instagram'
+    }
+  },
+  computed: {
+    user() {
+      return this.$store.state.users.find((user) => user.username === this.id)
+    },
+    relatedPosts() {
+      return this.$store.state.posts.filter((post) => post.username !== this.id)
+    }
   }
 }
 </script>

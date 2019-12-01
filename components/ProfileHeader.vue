@@ -4,13 +4,12 @@
       <div class="container">
         <div class="profile">
           <div class="profile-image">
-            <img
-              src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
-              alt
-            />
+            <img :src="user.profilePic" alt />
           </div>
+
+          <!-- src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" -->
           <div class="profile-user-settings">
-            <h1 class="profile-user-name">username</h1>
+            <h1 class="profile-user-name">{{ user.username }}</h1>
             <button class="btn profile-edit-btn">Edit Profile</button>
             <button class="btn profile-settings-btn">
               <i class="settings-icon"></i>
@@ -18,38 +17,58 @@
           </div>
           <div class="profile-stats">
             <li>
-              <span class="profile-stat-count">20</span>
+              <span class="profile-stat-count">{{ relatedPosts.length }}</span>
               posts
             </li>
             <li>
-              <span class="profile-stat-count">823</span>
+              <span class="profile-stat-count">{{ user.follwers }}</span>
               followers
             </li>
             <li>
-              <span class="profile-stat-count">36</span>
+              <span class="profile-stat-count">{{ user.following }}</span>
               following
             </li>
           </div>
           <div class="profile-bio">
             <p>
-              <span class="profile-real-name">User Name</span>
+              <span class="profile-real-name"
+                >{{ user.name }} {{ user.lastname }}</span
+              >
               <br />
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️
+              {{ user.description }}
             </p>
           </div>
         </div>
       </div>
     </header>
 
-    <Posts />
+    <Posts :relatedPosts="relatedPosts" />
   </div>
 </template>
 
 <script>
 import Posts from '~/components/Posts.vue'
+
 export default {
   components: {
     Posts
+  },
+  props: {
+    user: {
+      type: Array,
+      required: true,
+      default() {
+        return []
+      }
+    },
+    relatedPosts: {
+      type: Object,
+      required: true,
+      default() {
+        return {}
+      }
+    },
+    data: () => ({})
   }
 }
 </script>
